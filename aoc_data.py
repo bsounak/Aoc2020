@@ -11,8 +11,7 @@ def load(day):
         raise Exception(
             "No data available for day{} at {}".format(day, cache)
         )
-    with open(os.path.join(cache, "day1.txt"), "rb") as f:
+    with open(os.path.join(cache, fname), "rb") as f:
         data = f.read()
-        data = [int(v) for v in data.split()]
 
     return data

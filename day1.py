@@ -1,7 +1,8 @@
-import aoc_data
 import time
+import aoc_data
 
 data = aoc_data.load(1)
+data = [int(v) for v in data.split()]
 
 start = time.time()
 min_val = min(data)

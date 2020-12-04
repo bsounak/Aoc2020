@@ -14,11 +14,8 @@ for i in data:
         key, val = j.split(":")
         pdict[key] = val
     passport.append(pdict)
-
-mandatory_fields = ["ecl", "pid", "eyr", "hcl", "byr", "iyr", "hgt"]
-optional_fields = ["cid"]
-mandatory_fields = set(mandatory_fields)
-optional_fields = set(optional_fields)
+mandatory_fields = set(["ecl", "pid", "eyr", "hcl", "byr", "iyr", "hgt"])
+optional_fields = set(["cid"])
 
 def valid_height(height):
     if height.endswith("cm") and len(height) == 5:
@@ -63,10 +60,8 @@ for p in passport:
 
         if not len(p["pid"]) == 9:
             raise ValueError
-
         if not all([s.isdigit() for s in p["pid"]]):
             raise ValueError
-
     except ValueError:
         pass
     else:

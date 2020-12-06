@@ -8,15 +8,13 @@ start = time.time()
 
 count = 0
 for v in data:
-    v = "".join(v.split("\n"))
-    count += len(set(v))
+    count += len(set("".join(v.split("\n")) ))
 print(count)
 
 # part 2
 count = 0
 for v in data:
-    v = v.split("\n")
-    count += len(set.intersection(*[set(i) for i in v]))
+    count += len(set.intersection(*[set(i) for i in v.split("\n")]))
 print(count)
 
 end = time.time()

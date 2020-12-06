@@ -8,7 +8,7 @@ start = time.time()
 
 count = 0
 for v in data:
-    count += len(set("".join(v.split("\n")) ))
+    count += len(set("".join(v.split("\n"))))
 print(count)
 
 # part 2

@@ -45,3 +45,5 @@ def contains(bag):
 
 
 print(contains("shiny gold"))
+end = time.time()
+print("time: ", end-start)

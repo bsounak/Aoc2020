@@ -8,7 +8,7 @@ start = time.time()
 nrow = len(data)
 ncol = len(data[0])
 
-flips = -1
+flips = None
 while flips != 0:
     flips = 0
     result = data.copy()
